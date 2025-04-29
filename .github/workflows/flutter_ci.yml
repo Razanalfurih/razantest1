@@ -1,6 +1,12 @@
 name: Flutter CI
 
-on: [push, pull_request]
+on: 
+  push:
+    branches:
+      - main  
+  pull_request:
+    branches:
+      - main 
 
 jobs:
   test:
@@ -13,8 +19,7 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.19.0'
-
+          flutter-version: '3.19.0'  
       - name: Install dependencies
         run: flutter pub get
 
@@ -29,3 +34,4 @@ jobs:
         with:
           name: coverage-report
           path: coverage/
+
