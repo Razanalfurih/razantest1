@@ -1,0 +1,4 @@
+engines:
+  coverage:
+    enabled: true
+    minimum_coverage: 80
